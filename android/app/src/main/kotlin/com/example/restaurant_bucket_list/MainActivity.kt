@@ -1,4 +1,4 @@
-package com.example.restaurant_bucket_list
+package com.example.flutter_sandbox
 
 import io.flutter.embedding.android.FlutterActivity
 
