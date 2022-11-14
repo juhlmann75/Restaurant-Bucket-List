@@ -5,11 +5,13 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_sandbox/counter_app.dart';
+import 'package:flutter_sandbox/timer_app.dart';
 import 'counter_observer.dart';
 
 void main() {
-  Bloc.observer = CounterObserver();
-  runApp(const CounterApp());
+  // Bloc.observer = CounterObserver();
+  // runApp(const CounterApp());
+  runApp(const TimerApp());
 }
 
 class MyApp extends StatelessWidget {
