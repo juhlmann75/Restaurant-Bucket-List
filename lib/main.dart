@@ -5,13 +5,17 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_sandbox/counter_app.dart';
+import 'package:flutter_sandbox/page_app.dart';
+import 'package:flutter_sandbox/simple_bloc_observer.dart';
 import 'package:flutter_sandbox/timer_app.dart';
 import 'counter_observer.dart';
 
 void main() {
   // Bloc.observer = CounterObserver();
   // runApp(const CounterApp());
-  runApp(const TimerApp());
+  // runApp(const TimerApp());
+  Bloc.observer = SimpleBlocObserver();
+  runApp(const PageApp());
 }
 
 class MyApp extends StatelessWidget {
