@@ -1,6 +1,7 @@
 // Copyright 2018 The Flutter team. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
+import 'package:authentication_repository/authentication_repository.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,14 +9,20 @@ import 'package:flutter_sandbox/counter_app.dart';
 import 'package:flutter_sandbox/page_app.dart';
 import 'package:flutter_sandbox/simple_bloc_observer.dart';
 import 'package:flutter_sandbox/timer_app.dart';
+import 'package:user_repository/user_repository.dart';
+import 'LoginApp.dart';
 import 'counter_observer.dart';
 
 void main() {
   // Bloc.observer = CounterObserver();
   // runApp(const CounterApp());
   // runApp(const TimerApp());
-  Bloc.observer = SimpleBlocObserver();
-  runApp(const PageApp());
+  // Bloc.observer = SimpleBlocObserver();
+  // runApp(const PageApp());
+  runApp(LoginApp(
+    authenticationRepository: AuthenticationRepository(),
+    userRepository: UserRepository(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
