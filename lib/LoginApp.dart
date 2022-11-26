@@ -2,8 +2,10 @@ import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:user_repository/user_repository.dart';
-
 import 'authentication/bloc/authentication_bloc.dart';
+import 'package:flutter_sandbox/splash/splash.dart';
+import 'home/view/home_page.dart';
+import 'login/view/login_page.dart';
 
 class LoginApp extends StatelessWidget {
   const LoginApp({
