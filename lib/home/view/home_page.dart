@@ -36,6 +36,44 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      //https://blog.logrocket.com/how-to-add-navigation-drawer-flutter/
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const UserAccountsDrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
+              accountName: Text(
+                "Account Name",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              accountEmail: Text(
+                "account.name@gmail.com",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              currentAccountPicture: FlutterLogo(),
+            ),
+            ListTile(
+                leading: const Icon(
+                  Icons.home,
+                ),
+                title: const Text('Item 1'),
+                onTap: () => Navigator.pop(context)
+            ),
+            ListTile(
+                leading: const Icon(
+                  Icons.train,
+                ),
+                title: const Text('Item 2'),
+                onTap: () => Navigator.pop(context)
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
